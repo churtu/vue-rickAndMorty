@@ -1,6 +1,18 @@
+<script lang="ts" setup>
+import { RouterView } from 'vue-router'
+import NavBar from '@/shared/components/NavBar.vue';
+import { routeLinks } from './router/route-links';
+
+</script>
+
 <template>
   <div class="wrapper">
-    <h1>App.vue</h1>
+    <header>
+      <NavBar title="BreakingBad" :routeLinks="routeLinks"/>
+    </header>
+    <main>
+      <RouterView/>
+    </main>
   </div>
 </template>
 
